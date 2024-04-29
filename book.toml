@@ -4,3 +4,19 @@ language = "en"
 multilingual = false
 src = "src"
 title = "Psychonaut Station Codebase Wiki"
+
+[output.html]
+default-theme = "mocha"
+preferred-dark-theme = "mocha"
+additional-css = [
+  "./theme/global.css",
+]
+curly-quotes = true
+mathjax-support = false
+copy-fonts = true
+no-section-label = false
+git-repository-url = "saykonat github"
+git-repository-icon = "fa-github"
+edit-url-template = "wikigithub /edit/master/guide/{path}"
+site-url = "/codebase-wiki/"
+input-404 = "404.md"
