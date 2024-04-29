@@ -2,7 +2,7 @@
 
 Git'i [bu linkten](https://git-scm.com/downloads) sisteminize uygun olanı seçerek indirebilir veya winget kullanmak isterseniz
 
-```
+```bat
 winget install --id Git.Git -e --source winget
 ```
 
@@ -28,7 +28,7 @@ Kurulum işlemini tamamladığınızda Git programının başarılı bir şekild
 
 Konsol kısmına
 
-```
+```bat
 git version
 ```
 
