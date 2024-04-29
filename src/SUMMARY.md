@@ -8,7 +8,7 @@
 
 - [Kodlamaya Giriş](code/introduction.md)
   - [Git](code/git.md)
-    - [Git Kurulumu](code/git.md)
+    - [Git Kurulumu](code/git/setup.md)
     - [Repository İndirme](code/git.md)
     - [Git Kullanımı](code/git.md)
   - [VS Code](code/vscode.md)
