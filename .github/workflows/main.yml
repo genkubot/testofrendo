@@ -22,9 +22,7 @@ jobs:
           mdbook-version: "latest"
 
       - name: Test Markdown Files
-        uses: DavidAnson/markdownlint-cli2-action@v16
-        with:
-          globs: "src/*.md"
+        run: mdbook test
 
       - name: Build mdBook
         run: mdbook build
