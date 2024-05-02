@@ -8,7 +8,7 @@ on:
     branches: [master]
 
 jobs:
-  build-deploy:
+  mdbook-build-deploy:
     permissions: write-all
     runs-on: ubuntu-latest
 
@@ -22,10 +22,17 @@ jobs:
           mdbook-version: "latest"
 
       - name: Test Markdown Files
+        id: md-test
         run: mdbook test
 
       - name: Build mdBook
-        run: mdbook build
+        run: |
+          if [[ steps.md-test.conclusion == 'success' && !cancelled() ]];
+          then
+            mdbook build
+          else 
+            echo "Valid commit message not detected. stage 2 will not run."
+            exit 1
 
       - name: Delete old Pages Deployments
         uses: strumwolf/delete-deployment-environment@v2
