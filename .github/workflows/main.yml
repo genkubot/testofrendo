@@ -4,9 +4,6 @@ on:
   push:
     branches: [master]
 
-  pull_request:
-    branches: [master]
-
 jobs:
   mdbook-build-deploy:
     permissions: write-all
@@ -27,6 +24,13 @@ jobs:
 
       - name: Build mdBook
         run: mdbook build
+
+      - name: Delete old Pages Deployments
+        uses: strumwolf/delete-deployment-environment@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          environment: github-pages
+          onlyRemoveDeployments: true
 
       - name: Deploy to GitHub Pages
         if: ${{ github.event_name != 'pull_request' }}
