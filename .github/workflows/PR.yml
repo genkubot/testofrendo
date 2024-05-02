@@ -5,7 +5,7 @@ on:
     branches: [master]
 
 jobs:
-  mdbook-build-deploy:
+  mdbook-build-test:
     runs-on: ubuntu-latest
 
     steps:
