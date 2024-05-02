@@ -57,4 +57,6 @@ Ardından alttaki kodu CMD ye yazarak codebaseyi indirmeye başlayabilirsiniz.
 git clone <Kopyaladığınız Link>
 ```
 
+![1](../../images/git/repo8.gif)
+
 Git kullanarak indirirken codebasenin tamamını indirdiğinizden dolayı bu indirme biraz uzun sürecektir.
