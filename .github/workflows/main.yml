@@ -33,6 +33,7 @@ jobs:
           else 
             echo "Valid commit message not detected. stage 2 will not run."
             exit 1
+          fi
 
       - name: Delete old Pages Deployments
         uses: strumwolf/delete-deployment-environment@v2
