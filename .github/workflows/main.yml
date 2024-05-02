@@ -27,7 +27,7 @@ jobs:
 
       - name: Build mdBook
         run: |
-          if [[ ${{steps.md-test.conclusion}} == 'success']];
+          if [[ ${{steps.md-test.conclusion}} == success]];
           then
             mdbook build
           else 
